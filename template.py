@@ -30,7 +30,7 @@ from langchain_core.output_parsers import StrOutputParser
 #
 
 # 👉 Supply your active API credentials here
-os.environ["GROQ_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = "api"
 
 print("✅ Credentials injected successfully.")
 
@@ -41,7 +41,7 @@ print("✅ Credentials injected successfully.")
 
 # ========= CONFIG =========
 # 🔑 Add your API key here
-API_KEY = "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"
+API_KEY = "api"
 
 
 
