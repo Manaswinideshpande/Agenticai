@@ -79,7 +79,7 @@ def extract_clean_text_from_url(url: str) -> str:
                 sub_res = requests.get(target_path, headers=headers, timeout=5)
                 if sub_res.status_code == 200:
                     sub_soup = BeautifulSoup(sub_res.content, "html.parser")
-                    for element in sub_soup(["script", "style", "nav", "footer", "header"]):
+                    for element in sub_soup(["script", "style"]):
                         element.decompose()
                     aggregated_raw_text.append(sub_soup.get_text(separator=" "))
             except Exception:
@@ -172,8 +172,8 @@ from langchain_core.output_parsers import StrOutputParser
 if __name__ == "__main__":
     # 👉 Replace with provided company URLs
     urls = [
-        "https://www.leewayhertz.com","https://dataflirt.com/?utm_source=copilot.com",
-        "https://sigmoidal.io","https://www.azilen.com"
+        "https://www.leewayhertz.com","https://dataflirt.com",
+        "https://sigmoidal.io","https://www.azilen.com","https://www.azilen.com"
     ]
 
     results = []
