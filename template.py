@@ -206,7 +206,7 @@ import time
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from AI_agent import enrich_company
+#from AI_agent import enrich_company
 
 # Page configuration
 st.set_page_config(page_title="Prospect Research Intelligence Matrix", layout="wide")
