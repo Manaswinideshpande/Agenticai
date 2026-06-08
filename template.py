@@ -246,8 +246,22 @@ if enrich_btn:
         st.session_state.profile_database.append(enriched_data)
         
         st.success("Target Record Enriched Successfully!")
-        st.json(enriched_data)
-
+       # st.json(enriched_data)
+        # 🌟 PROFESSIONAL LIVE UI CARD (Replaced the raw st.json display)
+        st.markdown(f"### 🏢 Corporate Intelligence Profile: {enriched_data.get('company_name')}")
+        
+        card_col1, card_col2 = st.columns(2)
+        with card_col1:
+            st.markdown(f"**📍 Headquarter Location:** {enriched_data.get('address')}")
+            st.markdown(f"**📞 Verified Phone:** {enriched_data.get('mobile_number')}")
+            st.markdown(f"**✉️ Emails Found:** {', '.join(enriched_data.get('mail', [])) if enriched_data.get('mail') else 'N/A'}")
+        with card_col2:
+            st.markdown(f"**🎯 Core Service Summary:** {enriched_data.get('core_service')}")
+            st.markdown(f"**👥 Target Buyer Market:** {enriched_data.get('target_customer')}")
+            st.markdown(f"**⚠️ Predicted Corporate Bottleneck:** {enriched_data.get('probable_pain_point')}")
+            
+        st.info(f"💬 **Hyper-Personalized Outreach Opener:**\n{enriched_data.get('outreach_opener')}")
+       
 st.write("---")
 
 # 🔹 2. RESULTS SECTION
