@@ -23,7 +23,7 @@ import urllib.parse
 import time
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-Import LangChain core components
+#Import LangChain core components
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 # 
@@ -207,7 +207,7 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 import time
-from AI_agent import enrich_company
+#from AI_agent import enrich_company
 #from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 #Import LangChain core components
