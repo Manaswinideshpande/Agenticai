@@ -210,8 +210,10 @@ from langchain_core.output_parsers import StrOutputParser
 
 # Page configuration
 if 'streamlit_initialized' not in st.session_state:
-    st.set_page_config(page_title="Prospect Research Intelligence Matrix", layout="wide")
-    st.session_state.streamlit_initialized = True
+    st.set_page_config(
+    page_title="Prospect Research Intelligence Matrix", 
+    layout="wide")
+   
 st.title("🕵️‍♂️ B2B Prospect Research & Enriched Corporate Agent")
 st.markdown("Single-Agent production pipeline engineered to extract corporate sites, optimize text logs, and parse structured sales intelligence profiles.")
 st.write("---")
